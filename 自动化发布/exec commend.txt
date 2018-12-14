@@ -1,0 +1,13 @@
+#!/bin/bash -ilex
+source /etc/profile
+
+rm -rf /home/admin/deploy/uadmin/current
+ln -s /home/admin/deploy/uadmin/release/${GIT_COMMIT}/ /home/admin/deploy/uadmin/current
+
+cd /home/admin/deploy/uadmin/current
+
+tar zxvf uadmin-job-deploy.tar.gz
+cd bin
+sh stop.sh
+
+sleep 10

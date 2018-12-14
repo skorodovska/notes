@@ -1,0 +1,21 @@
+规则:
+>如果字母以e结尾那么e不发音如果前面还有母音字母,就发它自己的音 eg.[name]
+>如果母音字母(a e i o u)加上r那么发'额'的音 eg.[ar er ir or ur]
+>*s 构成名词复数/动词一般现在时/第三人称单数时,在清辅音后读/s/,eg.[hepls],在原音/浊辅音后读/z/, eg.[plans] 还有es结尾读/iz/
+>两个o连一块发'污'这个音 eg.[food]
+>au aw ou ow 发'奥'这个音 eg.[author]
+>th [斯] [子] eg.[think this]
+>ch [斥]
+>sh [示]
+>ph [父]
+>ng连在一起发'嗯'这个音或者'恩哥' eg.[english]
+>nk连在一起发'恩科'
+
+abbreviate
+abbreviation
+abbreviator
+brevity ity名词后缀
+brief 简短的形容词
+abbreviate
+
+到了9张禁止上传

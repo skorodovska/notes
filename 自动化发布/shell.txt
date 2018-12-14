@@ -1,0 +1,45 @@
+#SHELL 设置不回显执行的命令
+#set +x
+
+BUILD_ID=andy05
+cd /root/.jenkins/workspace/kol-back/
+
+echo "input COMMITID=$INPUT_COMMITID"
+
+if [ -z "${INPUT_COMMITID}" ];
+then
+  echo "***********************************"
+  echo " no input COMMITID"
+  echo " use default"
+  git pull origin develop
+  git branch
+  echo "GIT_COMMIT=[$GIT_COMMIT]"
+  git reset --hard ${GIT_COMMIT}
+  
+else
+  if [ ${#INPUT_COMMITID} -lt 7 ]
+  then
+    echo "Pls input more than 8 digits COMMITID"
+    exit 1
+  fi
+
+  INPUT_COMMITID=${INPUT_COMMITID:0:7}
+  echo "8digit COMMITID=$INPUT_COMMITID"
+  
+  git pull origin develop
+  GIT_COMMIT=$INPUT_COMMITID
+  echo "GIT_COMMIT=[$GIT_COMMIT]"
+  
+  echo "*******************display current branch ***************"
+  git branch
+  git reset --hard ${GIT_COMMIT}
+
+  echo "*******************finish shell.*************************"
+fi
+
+
+#git fetch --all
+#git reset --hard origin/develop
+#git pull origin develop
+
+mvn clean package -U -Dmaven.test.skip=true -Pm_alitest
